@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wan Tu Som</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Wan Tu Som</h1>
+        <div class="score-board">
+            <div id="user-label" class="badge">User</div>
+            <div id="score">0 - 0</div>
+            <div id="computer-label" class="badge">Comp</div>
+        </div>
+        <div class="result">
+            <p>Make your move</p>
+        </div>
+        <div class="choices">
+            <div class="choice" id="batu">
+                <img src="batu.png" alt="Batu">
+                <span class="choice-name">Batu</span>
+            </div>
+            <div class="choice" id="air">
+                <img src="air.png" alt="Air">
+                <span class="choice-name">Air</span>
+            </div>
+            <div class="choice" id="burung">
+                <img src="burung.png" alt="Burung">
+                <span class="choice-name">Burung</span>
+            </div>
+        </div>
+        <p id="action-message">Choose Batu, Air, or Burung to start the game!</p>
+
+        <!-- End Game Message -->
+        <div id="end-game-message" class="hidden">
+            <p id="result-message"></p>
+            <button id="restart-btn">Restart Game</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Created by Nashrune®</p>
+    </footer>
+
+    <!-- Audio Elements -->
+    <audio id="click-sound" src="sounds/click.mp3"></audio>
+    <audio id="win-sound" src="sounds/win.mp3"></audio>
+    <audio id="lose-sound" src="sounds/lose.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

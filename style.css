@@ -1,0 +1,172 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #e0e0e0; /* Lighter background for better contrast */
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Larger font size for the heading */
+    color: #444; /* Slightly lighter color for contrast */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for text */
+}
+
+.score-board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 15px; /* Increased padding */
+    background: #444; /* Darker background for the scoreboard */
+    color: white;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.badge {
+    background: #fff; /* White background for labels */
+    color: #333;
+    padding: 10px 20px; /* Larger padding for better readability */
+    border-radius: 25px; /* Rounded badge shape */
+    font-size: 1.5em; /* Larger font size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#user-label, #computer-label {
+    flex: 1; /* Distribute space equally */
+}
+
+#score {
+    font-size: 2em; /* Larger score font size */
+    font-weight: bold;
+    margin: 0 15px; /* Space around the score */
+}
+
+.result p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555; /* Slightly lighter color for the result text */
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.choice {
+    width: 100px; /* Size of the choice */
+    height: 100px; /* Height for the circular image */
+    display: flex; /* Center the image and name */
+    flex-direction: column; /* Stack image and name vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    margin: 0 10px; /* Space between choices */
+}
+
+.choice img {
+    width: 100px; /* Size of the image */
+    height: 100px; /* Height of the image */
+    border-radius: 50%; /* Circular shape */
+    border: 3px solid #444; /* Border for visibility */
+    background-color: #f8f8f8; /* Light background for choices */
+    object-fit: cover; /* Ensure image covers the container */
+}
+
+.choice-name {
+    margin-top: 10px; /* Space between image and name */
+    font-size: 1em; /* Font size for the name */
+    color: #333; /* Text color */
+    font-weight: bold; /* Bold text */
+}
+
+.choice:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.choice.selected {
+    border-color: #f00; /* Red border for selected choice */
+    transform: scale(1.1); /* Slightly enlarge when selected */
+    transition: transform 0.2s, border-color 0.2s; /* Smooth transition */
+}
+
+#action-message {
+    font-size: 1.1em;
+    margin-top: 30px; /* Increased margin-top to move the text down */
+    color: #666; /* Lighter color for action message */
+}
+
+@media (max-width: 600px) {
+    .choice {
+        width: 80px; /* Adjusted size for smaller screens */
+        height: 80px; /* Adjust height accordingly */
+    }
+
+    .choice img {
+        width: 80px; /* Adjust image size */
+        height: 80px; /* Adjust image height */
+    }
+
+    .result p, #score {
+        font-size: 1em;
+    }
+}
+
+footer {
+    margin-top: 30px;
+    padding: 15px 0;
+    background: #333;
+    color: white;
+    text-align: center;
+    border-top: 1px solid #444; /* Subtle border at the top */
+}
+
+footer p {
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+#end-game-message {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#result-message {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+#restart-btn {
+    padding: 10px 25px;
+    font-size: 1.2em;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#restart-btn:hover {
+    background-color: #555;
+}
