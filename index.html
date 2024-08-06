@@ -16,33 +16,26 @@
             <div id="computer-label" class="badge">Comp</div>
         </div>
         <div class="result">
-            <p>Make your move</p>
+            <div class="choice-result">
+                <img id="user-choice-img" src="images/idle.png" alt="User Choice" class="user-choice">
+                <p id="result-text">VS</p>
+                <img id="computer-choice-img" src="images/idle.png" alt="Computer Choice" class="computer-choice">
+            </div>
+            <p id="action-message">Choose Batu, Air, or Burung to start the game!</p>
         </div>
         <div class="choices">
-            <div class="choice" id="batu">
-                <img src="batu.png" alt="Batu">
-                <span class="choice-name">Batu</span>
-            </div>
-            <div class="choice" id="air">
-                <img src="air.png" alt="Air">
-                <span class="choice-name">Air</span>
-            </div>
-            <div class="choice" id="burung">
-                <img src="burung.png" alt="Burung">
-                <span class="choice-name">Burung</span>
-            </div>
+            <div class="choice" id="batu"><img src="images/batu.png" alt="Batu"><p>Batu</p></div>
+            <div class="choice" id="air"><img src="images/air.png" alt="Air"><p>Air</p></div>
+            <div class="choice" id="burung"><img src="images/burung.png" alt="Burung"><p>Burung</p></div>
         </div>
-        <p id="action-message">Choose Batu, Air, or Burung to start the game!</p>
-
-        <!-- End Game Message -->
         <div id="end-game-message" class="hidden">
-            <p id="result-message"></p>
+            <p id="final-result"></p>
             <button id="restart-btn">Restart Game</button>
         </div>
     </div>
     
     <footer>
-        <p>Created by Nashri®</p>
+        <p>Created by Your Name</p>
     </footer>
 
     <!-- Audio Elements -->
