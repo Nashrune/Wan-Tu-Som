@@ -47,31 +47,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getComputerChoice() {
-        if (userChoices.length < 2) {
+        if (userChoices.length < 3) {
             return getRandomChoice();
         }
 
-        const lastUserChoice = userChoices[userChoices.length - 1];
-        const userChoiceCount = {
-            'batu': 0,
-            'air': 0,
-            'burung': 0
-        };
+        // Analyze recent user choices
+        const userLastChoices = userChoices.slice(-3);
+        const frequency = { 'batu': 0, 'air': 0, 'burung': 0 };
 
-        for (let i = userChoices.length - 1; i >= Math.max(0, userChoices.length - 3); i--) {
-            userChoiceCount[userChoices[i]]++;
-        }
+        userLastChoices.forEach(choice => frequency[choice]++);
 
-        const mostFrequentChoice = Object.keys(userChoiceCount).reduce((a, b) => userChoiceCount[a] > userChoiceCount[b] ? a : b);
+        // Predict the user's next move based on the most frequent recent choice
+        const mostFrequentChoice = Object.keys(frequency).reduce((a, b) => frequency[a] > frequency[b] ? a : b);
+
+        // Define winning move based on the user's most frequent choice
         const counterChoice = {
             'batu': 'air',
             'air': 'burung',
             'burung': 'batu'
         };
 
-        if (Math.random() > 0.5) {
+        // 99.4% chance to use counter strategy based on observed pattern
+        if (Math.random() < 0.994) {
             return counterChoice[mostFrequentChoice];
         } else {
+            // 0.6% chance to choose randomly
             return getRandomChoice();
         }
     }
